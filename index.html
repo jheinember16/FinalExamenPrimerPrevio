@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Periodico Digital</title>
+<link rel="stylesheet" href="estyle.css">	
+	
+</head>
+
+<body>
+<header> 
+	<hgroup> 
+		<h1>Periodico 6B</h1> 
+	</hgroup> 
+</header> 
+<nav> 
+	<ul>
+		<li><a title="ejercicio0.html" href="#">Inicio </a></li>
+		<li><a title="ejercicio1.html" href="#">Salon </a></li>
+		<li><a title="ejercicio2.html" href="#">Colegio </a></li>
+		<li><a title="ejercicio3.html" href="#">Region </a></li>
+		<li><a title="ejercicio0.html" href="#">Tecnologia </a></li>
+		<li><a title="ejercicio1.html" href="#">Farandula </a></li>
+		<li><a title="ejercicio2.html" href="#">Deportes </a></li>
+		<li><a title="ejercicio3.html" href="#">Juegos </a></li>
+	</ul>
+</nav> 
+<section> 
+	<table id="tabla">
+		<!-- <tr>
+			<th>Id</th>
+			<th>Titulo</th>
+			<th>Categoria</th>
+			<th>Descripcion</th>
+			<th>Detalle</th>
+			<th>Fecha</th>
+			<th>Imagen</th>
+		</tr> -->
+		
+			
+	</table>
+
+	<h2>Todas las noticias</h2>
+
+</section> 
+
+<aside> 
+	<h2>12 de Abril de 2021 Cúcuta</h2>
+	 <p>
+	 	<input type="search" name="busquedacodigo" size="4" maxlength="4">
+    	<input type="submit" value="Buscar">
+  	</p>
+</aside> 
+<aside> 
+	<h2>Deportes</h2>
+	 
+</aside> 
+<aside> 
+	<h2>Tecnologia</h2>
+	 
+</aside> 
+
+<footer>2021 @ Colegio Gimnasio UFPS</footer>
+
+
+
+<script type="text/javascript">	
+
+		function cargarTabla(json){
+
+		var url = "http://demo6497253.mockable.io/noticias";
+
+
+		fecth(url)
+			.then(response => response.json())
+			.then(data => generarTabla(data))
+		.catch(error =>{});	
+	}
+			
+
+	function generarTabla(json){
+
+
+		const tabla = document.getElementById("tabla");	
+
+	json.cartas.forEach ( xx =>{
+		const tr = document.createElement('tr');
+		const tdId = document.createElement('td');
+			tdId.textContent = xx.id;
+			tr.appendChild(tdId);
+		const tdTitulo = document.createElement('td');
+			tdTitulo.textContent = xx.titulo;
+			tr.appendChild(tdPalo);
+		const tdCategoria = document.createElement('td');
+			tdCategoria.textContent = xx.categoria;
+			tr.appendChild(tdValor);
+		const tdDescripcion = document.createElement('td');
+			tdDescripcion.textContent = xx.descripcion;
+			tr.appendChild(tdPalo);
+		const tdDetalle = document.createElement('td');
+			tdDetalle.textContent = xx.detalle;
+			tr.appendChild(tdValor);
+
+		const tdFecha = document.createElement('td');
+			tdFecha.textContent = xx.fecha;
+			tr.appendChild(tdPalo);
+		const tdImagen = document.createElement('td');
+			tdImagen.textContent = xx.imagen;
+			tr.appendChild(tdValor);			
+		tabla.tBodies[0].appendChild(tr);
+		
+		});	
+
+	}
+
+	document.getElementById("boton").onclick = cargarTabla;
+</script>
+
+</body>
+</html>
