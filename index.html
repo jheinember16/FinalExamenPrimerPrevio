@@ -66,7 +66,7 @@
 
 <script type="text/javascript">	
 
-		function cargarTabla(json){
+		function cargarTabla(){
 
 		var url = "http://demo6497253.mockable.io/noticias";
 
@@ -83,7 +83,7 @@
 
 		const tabla = document.getElementById("tabla");	
 
-	json.cartas.forEach ( xx =>{
+	json.noticias.forEach ( xx =>{
 		const tr = document.createElement('tr');
 		const tdId = document.createElement('td');
 			tdId.textContent = xx.id;
