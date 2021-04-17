@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="ES">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Periodico Digital</title>
-<link rel="stylesheet" href="estyle.css">	
-	
+<link rel="stylesheet" href="estyle.css">		
 </head>
 
 <body>
-<header> 
-	<hgroup> 
-		<h1>Periodico 6B</h1> 
-	</hgroup> 
+<header class="cc"> 
+	  <h1>
+	    <img class="logo" src="https://w7.pngwing.com/pngs/868/32/png-transparent-newspaper-source-computer-icons-pressure-miscellaneous-text-logo.png"  alt="Mi periodico">Periodico 6B
+	  </h1>
 </header> 
-<nav> 
+<nav > 
 	<ul>
 		<li><a title="ejercicio0.html" href="#">Inicio </a></li>
 		<li><a title="ejercicio1.html" href="#">Salon </a></li>
@@ -25,96 +27,66 @@
 		<li><a title="ejercicio3.html" href="#">Juegos </a></li>
 	</ul>
 </nav> 
-<section> 
-	<table id="tabla">
-		<tr>
-			<th>Id</th>
-			<th>Titulo</th>
-			<th>Categoria</th>
-			<th>Descripcion</th>
-			<th>Detalle</th>
-			<th>Fecha</th>
-			<th>Imagen</th>
-		</tr>
+
+
+	<div class="campo">
+		<h4 align="right" >12 de Abril de 2021 Cúcuta</h4>	
+		<h4 align="center" >Cúcuta</h4>		
+	</div>
+
+	<div class="campo">
+		<p align="right">
+	 	<input class="busqueda" type="search" name="busquedacodigo" maxlength="20">
+    	<input class="button" type="button" value="Buscar">
+  		</p>
+	</div> 	 
+
+		<div class="clearfix"></div> 
+
+	<aside> 	
+		<h2>Deportes</h2>
 		
-			
-	</table>
 
-	<h2>Todas las noticias</h2>
+	</aside>
 
-</section> 
+	<div class="clearfix"></div>
 
-<aside> 
-	<h2>12 de Abril de 2021 Cúcuta</h2>
-	 <p>
-	 	<input type="search" name="busquedacodigo" size="4" maxlength="4">
-    	<input type="submit" value="Buscar">
-  	</p>
-</aside> 
-<aside> 
-	<h2>Deportes</h2>
-	 
-</aside> 
-<aside> 
-	<h2>Tecnologia</h2>
-	 
-</aside> 
+	<aside> 	
+		<h2>Tecnologia</h2>		
+
+	</aside>
+
+	<section > 
+    	<h2>Todas Las Noticias</h2>
+	</section> 
+
+
+<section>
+	
+	<div >
+	      <img  class="centrado" src="img/1.jpg" alt="Enlace A Colegio" width="50px">
+	    	  <a  href="https://www.colegioandino.edu.co/" target="_blank">Página Colegio
+	    	  </a>
+	    
+	      <img  class="centrado" src="img/2.jpg" alt="Enlace A Correo " width="50px">
+	    	  <a class="centrado" href="mailto:jheinember@gmail.com?Subject=Interesado%20en%20el%20contenido" target="_blank">Correo Gmail
+	    	  </a>
+	   
+	      <img class="centrado" src="img/3.jpg" alt="Enlace a Pagina Santillana" width="50px" float="right">
+	    	  <a class="centrado" href="https://santillanacompartir.com.co/" target="_blank" >Página Santillana
+	    	  </a>
+
+
+    	  <img class="centrado" src="img/4.jpg" width="50px" font-size="5px" >Email: periodico@colegioufps.edu.co 
+    	  </img>    	
+	     
+	   		  
+    </div>
+	
+
+</section>	
 
 <footer>2021 @ Colegio Gimnasio UFPS</footer>
-
-
-
-<script type="text/javascript">	
-
-		function cargarTabla(){
-
-		var url = "http://demo6497253.mockable.io/noticias";
-
-
-		fecth(url)
-			.then(response => response.json())
-			.then(data => generarTabla(data))
-		.catch(error =>{});	
-	}
-			
-
-	function generarTabla(json){
-
-
-		const tabla = document.getElementById("tabla");	
-
-	json.noticias.forEach ( xx =>{
-		const tr = document.createElement('tr');
-		const tdId = document.createElement('td');
-			tdId.textContent = xx.id;
-			tr.appendChild(tdId);
-		const tdTitulo = document.createElement('td');
-			tdTitulo.textContent = xx.titulo;
-			tr.appendChild(tdPalo);
-		const tdCategoria = document.createElement('td');
-			tdCategoria.textContent = xx.categoria;
-			tr.appendChild(tdValor);
-		const tdDescripcion = document.createElement('td');
-			tdDescripcion.textContent = xx.descripcion;
-			tr.appendChild(tdPalo);
-		const tdDetalle = document.createElement('td');
-			tdDetalle.textContent = xx.detalle;
-			tr.appendChild(tdValor);
-
-		const tdFecha = document.createElement('td');
-			tdFecha.textContent = xx.fecha;
-			tr.appendChild(tdPalo);
-		const tdImagen = document.createElement('td');
-			tdImagen.textContent = xx.imagen;
-			tr.appendChild(tdValor);			
-		tabla.tBodies[0].appendChild(tr);
-		
-		});	
-
-	}
-
-	document.getElementById("boton").onclick = cargarTabla;
-</script>
 
 </body>
 </html>
