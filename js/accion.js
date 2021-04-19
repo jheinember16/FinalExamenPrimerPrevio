@@ -18,9 +18,7 @@ async function leerDireccion(direccion) {
 
     var direccion3 = "https://demo6497253.mockable.io/categoria/tecnologia";
     //"http://demo6497253.mockable.io/categoria/tecnologia";
-
-    var direccion4 = "https://demo6497253.mockable.io/noticias/1";
-    //"http://demo6497253.mockable.io/noticias/1"
+    
     var objeto = "";
     var a= "";
     var b= "";
@@ -43,6 +41,19 @@ async function leerDireccion(direccion) {
             `;
         });
         document.getElementById("seccionTecnologia").innerHTML = b;
+      })
+      
+      leerDireccion(direccion).then((noticias) => {
+        noticias.forEach((noticiasPrincipales) => {
+          objeto += `
+                
+                <h1>${noticiasPrincipales.titulo} - ${noticiasPrincipales.categoria} - ${noticiasPrincipales.fecha}</h1>
+                <p>${noticiasPrincipales.descripcion}</p>  
+                <a href="contenidoNoticia.html">Ver más</a>
+            `;
+        });
+        
+        document.getElementById("objeto").innerHTML = objeto;
       })
        
 
