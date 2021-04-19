@@ -46,7 +46,7 @@ async function leerDireccion(direccion) {
       leerDireccion(direccion).then((noticias) => {
         noticias.forEach((noticiasPrincipales) => {
           objeto += `
-                
+                <img>${noticiasPrincipales.img}</img>
                 <h1>${noticiasPrincipales.titulo} - ${noticiasPrincipales.categoria} - ${noticiasPrincipales.fecha}</h1>
                 <p>${noticiasPrincipales.descripcion}</p>  
                 <a href="contenidoNoticia.html">Ver más</a>
