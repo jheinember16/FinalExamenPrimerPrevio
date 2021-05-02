@@ -1,88 +1,135 @@
 <!DOCTYPE html>
-<html lang="ES">
-<head>
-	<meta charset="UTF-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Periodico Digital</title>
-	<link rel="stylesheet" href="estyle.css">		
-</head>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-	<header class="cc"> 
-		  <h1>
-		    <img class="logo" src="https://w7.pngwing.com/pngs/868/32/png-transparent-newspaper-source-computer-icons-pressure-miscellaneous-text-logo.png"  alt="Mi periodico">Periodico 6B
-		  </h1>
-	</header> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+   
+    <title>Hello, world!</title>
+  </head>
+  <body>
 
-	<nav > 
-		<ul>
-			<li><a title="ejercicio0.html" href="#">Inicio </a></li>
-			<li><a title="ejercicio1.html" href="#">Salon </a></li>
-			<li><a title="ejercicio2.html" href="#">Colegio </a></li>
-			<li><a title="ejercicio3.html" href="#">Region </a></li>
-			<li><a title="ejercicio0.html" href="#">Tecnologia </a></li>
-			<li><a title="ejercicio1.html" href="#">Farandula </a></li>
-			<li><a title="ejercicio2.html" href="#">Deportes </a></li>
-			<li><a title="ejercicio3.html" href="#">Juegos </a></li>
-		</ul>
-	</nav> 
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">            
+              <a class="navbar-brand" href="index.html">
+                <img src="img/periodico.png" width="30" height="30" alt="logo" class="d-inline text-red">
+                Periodico 6B
+             </a>
 
-	<div class="contPrincipal">
-        <main class="objeto">
-            <div class="objeto" id="objeto"></div>     
-       </main>   
-    </div>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+         
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class="navbar-nav mr-auto ml-auto text-center">
+                      <a class="nav-item nav-link active" href="index.html">Inicio</a>
+                      <a class="nav-item nav-link" href="#">Salon</a>
+                      <a class="nav-item nav-link" href="#">Colegio</a>
+                      <a class="nav-item nav-link" href="#">Region</a>
+                      <a class="nav-item nav-link" href="#">Tecnologia</a>
+                      <a class="nav-item nav-link" href="#">Farandula</a>
+                      <a class="nav-item nav-link" href="#">Deportes</a>
+                      <a class="nav-item nav-link" href="#">Juegos</a>
+                </div>
 
-	<div class="campo">
-		<h4 align="right" >12 de Abril de 2021</h4>	
-		<h4 align="center" >Cúcuta</h4>		
-	</div> 
+                <form class="d-flex flex-row justify-content-center" >
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>        
+            </div>
 
-	<div class="campo">
-		<p align="right">
-		<input class="busqueda" type="search" name="busquedacodigo" maxlength="20">
-		<input class="button" type="button" value="Buscar">
-		</p>
-	</div> 
+        </nav>
 
 
-	<aside>
-		<h3>Deportes</h3>
-		<div id="seccionDeportes"></div>
-	</aside>
+        <div class="container-fluid">
+            <div class="row">
 
-	<aside> 	
-		<h3>Tecnologia</h3>		
-		<div id="seccionTecnologia"></div>
-	</aside>
-
-	<aside class="datos">
-	    <h3>Contacto</h3>
-	    <p>Email: periodico@colegioufps.edu.co</p>
-	    <p>Twitter: @periodicoufps</p>
-	    <p>Av 20 N 12-34 Cúcuta</p>
-	</aside>     	
-
-	<section>	
-		<div>
-		    <img class="centrado" src="img/1.jpg" alt="Enlace A	Colegio" width="50px">
-		    	  <a  href="https://www.colegioandino.edu.co/" target="_blank">Página Colegio
-		    	  </a>
-		    
-		    <img class="centrado" src="img/2.jpg" alt="Enlace A Correo " width="50px">
-		    	  <a class="centrado" href="mailto:jheinember@gmail.com?Subject=Interesado%20en%20el%20contenido" target="_blank">Correo Gmail
-		    	  </a>
-		   
-		    <img class="centrado" src="img/3.jpg" alt="Enlace a Pagina Santillana" width="50px" >
-			    <a class="centrado" href="https://santillanacompartir.com.co/" target="_blank">Página Santillana</a>	   		  
-		</div>
-	</section> 
+                <div id="contenedor" class="row col-12 col-lg-8 ms-2">
+                    <img src="https://www.redeszone.net/app/uploads-redeszone.net/2016/05/Geometria-aleatoria.png" class="mx-auto mt-4 ml-4 "  height="250" width="800" >
 
 
-	<footer>2021 @ Colegio Gimnasio UFPS</footer>
+                    <section class="mx-auto mt-5 ml-4" id="objeto">
+                        Cargando ...                    
 
-	<script src="js/accion.js"></script>
+                    </section>
+                   
+                </div>
 
-</body>
+                    <div class="col-12 col-lg-4 mt-1 mt-lg-0">
+                        <section id="Categorias-Noticias">
+                                <h4 class="mt-5">Deportes</h4>
+                                <div id="seccionDeportes" class="card mt-3">
+                                    <div class="card-body " >
+                                       <h5 class="card-title">Deportes</h5>
+                                        <ul id="deportes" class="list-group list-group-flush">
+                                            Cargando...                                  
+                                          </ul>
+                                    </div>
+                                    
+                                </div>
+                                <h4 class="mt-5">Tecnologia</h4>
+                                <div id="seccionTecnologia" class="card mt-3">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Tecnologia</h5>
+                                        <ol id='tecnologia'    class="list-group list-group-flush">
+                                            Cargando...                                  
+                                          </ol>
+                                    </div>                            
+                                </div>                        
+                        </section>
+                    </div>
+            </div>
+        </div>
+
+
+    <footer class="bg-light text-center text-lg-start">            
+        <div class="container p-4">
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <h6 class="text-uppercase">
+                        <img  src="img/1.jpg" alt="Enlace A Colegio" width="40px">
+                        <a href="https://www.colegioandino.edu.co/" target="_blank">Pagina Colegio</a></h6>  
+                    </div>                     
+                    
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h6 class="text-uppercase"> 
+                        <img class="centrado" src="img/2.jpg" alt="Enlace a Correo" width="50px"> 
+                        <a href="mailto:jheinember@gmail.com?Subject=Interesado%20en%20el%20contenido" target="_blank">Correo Gmail</a></h6>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h6 class="text-uppercase"> 
+                        <img  src="img/3.jpg" alt="Enlace a Pagina Santillana" width="50px"> 
+                        <a href="https://santillanacompartir.com.co/" target="_blank">Página Santillana</a></h6>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">                
+                        <ul class="list-unstyled" class="centrado" >                        
+                            <li>
+                              <a href="#!" class="text-dark">Email: periodico@colegioufps.edu.co</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="text-dark">Twitter: @periodicoufps</a>
+                            </li>
+                            <li>
+                              <a href="#!" class="text-dark">Av 20 N 12-34 Cúcuta</a>
+                            </li>                
+                        </ul>
+                    </div>
+
+                </div>
+        </div>
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                2021 @ Colegio Gimnasio UFPS         
+           </div>
+    </footer>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/accion.js"></script>
+    </body>
 </html>
